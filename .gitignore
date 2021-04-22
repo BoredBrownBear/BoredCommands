@@ -1,0 +1,14 @@
+/.gradle/
+/.idea/
+/build/
+/.settings/
+/bin/
+/run/
+.classpath
+build.bat
+gen.bat
+eclipse.bat
+build1.gradle
+Minecraft_Client.launch
+Minecraft_Server.launch
+build-curse.bat

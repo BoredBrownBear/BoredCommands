@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "boredcommands",
+  "version": "${version}",
+  "name": "BoredCommands",
+  "description": "An updated fork of MyCommands by Markus23.",
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "boredbrownbear.boredcommands.BoredCommands"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.16.x"
+  },
+  "mixins": [
+    "boredcommands.mixins.json"
+  ],
+  "authors": [
+    "Markus23",
+    "BoredBrownBear"
+  ]
+}
