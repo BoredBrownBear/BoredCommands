@@ -21,9 +21,7 @@ import java.util.UUID;
 public class CommandTpa {
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher) {
         LiteralArgumentBuilder<ServerCommandSource> literal = CommandManager.literal("tpa");
-        literal.requires((source) -> {
-            return Permission.hasperm(source, literal);
-        })
+        literal.requires((source) -> Permission.hasperm(source, literal))
                 .then(CommandManager.argument("target", EntityArgumentType.player()).executes(context -> execute(context)));
 
         dispatcher.register(literal);

@@ -58,10 +58,7 @@ public class WarpPoint
 				return null;
 			}
 			wpnames.add(wp.name);
-		
-		
 		}
-		
 
 		return wpnames;
 	}

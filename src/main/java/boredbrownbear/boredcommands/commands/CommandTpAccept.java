@@ -22,16 +22,11 @@ public class CommandTpAccept {
 
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher) {
         LiteralArgumentBuilder<ServerCommandSource> literal = CommandManager.literal("tpaccept");
-        literal.requires((source) -> {
-            return Permission.hasperm(source, literal);
-        }).executes(context -> execute(context));
-
+        literal.requires((source) -> Permission.hasperm(source, literal)).executes(context -> execute(context));
         dispatcher.register(literal);
-        LiteralArgumentBuilder<ServerCommandSource> literal1 = CommandManager.literal("tpyes");
-        literal1.requires((source) -> {
-            return Permission.hasperm(source, literal);
-        }).executes(context -> execute(context));
 
+        LiteralArgumentBuilder<ServerCommandSource> literal1 = CommandManager.literal("tpyes");
+        literal1.requires((source) -> Permission.hasperm(source, literal)).executes(context -> execute(context));
         dispatcher.register(literal1);
     }
 

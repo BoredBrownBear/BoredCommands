@@ -3,6 +3,8 @@ An updated fork of the **Fabric** mod [MyCommands](https://github.com/Markus23/m
 
 **Utilities**:
 - /fly
+- /flyspeed
+- /walkspeed
 - /god
 - /repair
 - /heal
@@ -10,15 +12,15 @@ An updated fork of the **Fabric** mod [MyCommands](https://github.com/Markus23/m
 **Teleportation**:
 - /setspawn
 - /spawn
-- /delhome
 - /sethome
+- /delhome
 - /home
-- /delwarp
 - /setwarp
+- /delwarp
 - /warp
 - /tpa
-- /tpaccept
-- /tpdeny
+- /tpaccept, /tpyes
+- /tpdeny, /tpno
 - /back
 
 **Time & Weather**
@@ -28,4 +30,5 @@ An updated fork of the **Fabric** mod [MyCommands](https://github.com/Markus23/m
 - /rain
 
 ## Credits
-- [Lordwissend/Markus23](https://www.curseforge.com/members/lordwissend/followers) - Original author of [MyCommands](https://github.com/Markus23/mycommands)
+- [Lordwissend/Markus23](https://www.curseforge.com/members/lordwissend/followers), the original author of [MyCommands](https://github.com/Markus23/mycommands) which this mod is forked from
+- [PlanetTeamSpeak](https://www.curseforge.com/members/planetteamspeak), author of [MoreCommands](https://github.com/PlanetTeamSpeakk/MoreCommands), another great commands mod which I used as reference on some snippets
