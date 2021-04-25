@@ -5,10 +5,11 @@ import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import net.luckperms.api.cacheddata.CachedPermissionData;
 import net.luckperms.api.model.user.User;
-import net.luckperms.api.query.QueryOptions;
 import net.luckperms.api.util.Tristate;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.network.ServerPlayerEntity;
+
+import java.util.Objects;
 
 public class Permission {
 
@@ -21,12 +22,16 @@ public class Permission {
             return false;
         }
 
-        User user = BoredCommands.luckperms.getUserManager().getUser(player.getUuid());
-        QueryOptions queryOptions = user.getQueryOptions();
-        CachedPermissionData permissionData = user.getCachedData().getPermissionData(queryOptions);
+        if (Objects.requireNonNull(player.getServer()).isDedicated()) {
+            User user = BoredCommands.luckperms.getUserManager().getUser(player.getUuid());
+            assert user != null;
+            CachedPermissionData permissionData = user.getCachedData().getPermissionData();
 
-        Tristate checkResult = permissionData.checkPermission("boredcommands." + literal.getLiteral());
-        return checkResult.asBoolean();
+            Tristate checkResult = permissionData.checkPermission("boredcommands." + literal.getLiteral());
+            return checkResult.asBoolean();
+        } else {
+            return player.hasPermissionLevel(4);
+        }
 
     }
 

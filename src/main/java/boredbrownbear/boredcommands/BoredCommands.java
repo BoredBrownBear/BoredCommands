@@ -57,10 +57,9 @@ public class BoredCommands implements ModInitializer {
     private static void initWorlds() {
 
         ServerLifecycleEvents.SERVER_STARTED.register(server -> {
-            luckperms = LuckPermsProvider.get();
-
             if (server.isDedicated()) {
                 worlddir = new File(server.getRunDirectory(), server.getName());
+                luckperms = LuckPermsProvider.get();
             } else {
                 worlddir = server.getIconFile().getParentFile();
             }
