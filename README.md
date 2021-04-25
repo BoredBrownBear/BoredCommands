@@ -19,6 +19,8 @@ Only tested with version 1.16.5.
 - /god
 - /repair
 - /heal
+- /enderchest
+- /suicide
 
 **Teleportation**:
 
@@ -34,6 +36,7 @@ Only tested with version 1.16.5.
 - /tpaccept, /tpyes
 - /tpdeny, /tpno
 - /back
+- /rndtp, /rtp, /wild
 
 **Time & Weather**
 
