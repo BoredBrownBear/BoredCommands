@@ -36,6 +36,7 @@ public class CommandHeal {
     private static int execut(CommandContext<ServerCommandSource> context) throws CommandSyntaxException {
         ServerPlayerEntity requestedPlayer = mycomm.getPlayer(context.getSource(), EntityArgumentType.getPlayers(context, "target"));
         ServerPlayerEntity healer = context.getSource().getPlayer();
+        healer.sendSystemMessage(new TranslatableText("commands.heal.target.sent", (new LiteralText(requestedPlayer.getEntityName()).setStyle(MyStyle.Gold))).setStyle(MyStyle.Green), healer.getUuid());
         requestedPlayer.setHealth(requestedPlayer.getMaxHealth());
         requestedPlayer.getHungerManager().add(20, 20);
         requestedPlayer.sendSystemMessage(new TranslatableText("commands.heal.target.done", (new LiteralText(healer.getEntityName()).setStyle(MyStyle.Gold))).setStyle(MyStyle.Green), requestedPlayer.getUuid());

@@ -18,6 +18,7 @@
   "commands.god.disabled": "God mode is disabled.",
   "commands.god.error": "God mode can only be enabled in Survival or Adventure mode.",
   "commands.heal.self.done": "Health and hunger has been restored.",
+  "commands.heal.target.sent": "You restored the health and hunger of %s.",
   "commands.heal.target.done": "Your health and hunger has been restored by %s.",
   "commands.home.done": "You have teleported home.",
   "commands.home.failure": "You have no home.",
@@ -39,6 +40,7 @@
   "commands.warp.done": "You have teleported to '%s'.",
   "commands.warp.failure": "Warp '%s' does not exist.",
   "commands.tpa.request": "You have received a teleport request from %s.",
+  "commands.tpa.request.sent": "Teleport request sent to %s.",
   "commands.tpa.info": "Type /tpaccept /tpyes to accept, or /tpdeny /tpno to deny.",
   "commands.tpa.error": "You cannot request a teleport to yourself.",
   "commands.tpa.youdenied": "You denied the teleport request.",
@@ -48,5 +50,9 @@
   "commands.tpa.gotaccepted": "Your teleport request got accepted.",
   "commands.tpa.notonline": "Teleport request failed because player is not online.",
   "commands.tpa.nonetoaccept": "There's not teleport request to accept.",
+  "commands.tpa.accept": "[ACCEPT]",
+  "commands.tpa.accept.info": "Click to Accept Teleport Request",
+  "commands.tpa.deny": "[DENY]",
+  "commands.tpa.deny.info": "Click to Deny Teleport Request",
   "death.attack.suicide": "%s made the choice to end their own life."
 }
